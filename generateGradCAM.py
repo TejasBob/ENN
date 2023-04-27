@@ -72,7 +72,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = ResNet18(num_classes=10)
 model = model.to(device)
-# model.load_state_dict(torch.load(best_model_path))
+model.load_state_dict(torch.load(best_model_path))
 model.eval()
 print(model.network)
 
